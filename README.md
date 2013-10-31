@@ -9,7 +9,6 @@ got to be a better way."
 
 Hmmm.... Razor exists. It's just angle brackets. I wonder...
 
-    csharp Template.cshtml
     @* Generator : Template TypeVisibility : Internal *@
     @using System.Collections.Generic
     @using RazorXmlDemo;
