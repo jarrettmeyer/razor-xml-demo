@@ -9,27 +9,24 @@ got to be a better way."
 
 Hmmm.... Razor exists. It's just angle brackets. I wonder...
 
+    csharp Template.cshtml
+    @* Generator : Template TypeVisibility : Internal *@
+    @using System.Collections.Generic
+    @using RazorXmlDemo;
 
-
-``` csharp Template.cshtml
-@* Generator : Template TypeVisibility : Internal *@
-@using System.Collections.Generic
-@using RazorXmlDemo;
-
-@functions {
-public IEnumerable<XmlModel> Model { get; set; }
-}
-<?xml version="1.0" encoding="UTF-8"?>
-<People>
-    @foreach (var m in Model)
-    {
+    @functions {
+    public IEnumerable<XmlModel> Model { get; set; }
+    }
+    <?xml version="1.0" encoding="UTF-8"?>
+    <People>
+      @foreach (var m in Model)
+      {
         <Person>
-            <FirstName>@m.FirstName</FirstName>
-            <LastName>@m.LastName</LastName>
+          <FirstName>@m.FirstName</FirstName>
+          <LastName>@m.LastName</LastName>
         </Person>
-    }    
-</People>
-```
+      }    
+    </People>
 
 Be sure to include a `Generator` statement as the first line of code.
 
