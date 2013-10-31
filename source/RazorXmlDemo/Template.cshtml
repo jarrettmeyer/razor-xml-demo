@@ -1,0 +1,18 @@
+﻿@* Generator : Template TypeVisibility : Internal *@
+
+@using System.Collections.Generic
+@using RazorXmlDemo;
+
+@functions {
+public IEnumerable<XmlModel> Model { get; set; }
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<People>
+    @foreach (var m in Model)
+    {
+        <Person>
+            <FirstName>@m.FirstName</FirstName>
+            <LastName>@m.LastName</LastName>
+        </Person>
+    }    
+</People>
